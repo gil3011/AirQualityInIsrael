@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import scipy.stats as stats
-
+st.set_page_config(layout="wide")
 @st.cache_data
 def load_data():
     season_data = pd.read_csv("Data/season_data.csv")

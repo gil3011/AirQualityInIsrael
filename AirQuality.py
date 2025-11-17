@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 import itertools
 
+st.set_page_config(layout="wide")
 @st.cache_data
 def load_data():
     pollutants = ['O3','NOx','PM10','PM25','SO2','TEMP']

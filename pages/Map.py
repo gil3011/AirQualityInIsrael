@@ -4,7 +4,7 @@ import numpy as np
 from pyproj import Transformer
 import pydeck as pdk
 from math import radians, sin, cos, sqrt, atan2
-
+st.set_page_config(layout="wide")
 df_cities = pd.read_csv("Data/cities.csv")
 df_stations = pd.read_csv("Data/stations.csv")
 
