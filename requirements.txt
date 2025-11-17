@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+pyproj
+pydeck
+matplotlib
+seaborn
+scikit-learn
+scipy
