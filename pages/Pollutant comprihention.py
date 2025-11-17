@@ -8,7 +8,7 @@ import scipy.stats as stats
 
 @st.cache_data
 def load_data():
-    season_data = pd.read_csv("season_data.csv")
+    season_data = pd.read_csv("Data/season_data.csv")
     scaler = MinMaxScaler()
     pollutants1 = season_data[["PM25","O3","PM10","NOx","SO2","TEMP"]]
     pollutants1= scaler.fit_transform(pollutants1)
@@ -24,7 +24,6 @@ season_data,scaled_df = load_data()
 st.markdown("""
     <style>
     body, .reportview-container, .main {
-        direction: rtl;
         text-align: right;
     }
     </style>
@@ -78,7 +77,7 @@ with st.spinner("Generating plot..."):
     ax.grid(True)
 
     st.pyplot(fig)
-st.write("השוואה סטטיסטית בין זוגות מזהמים",divider=True)
+st.write("השוואה סטטיסטית בין זוגות מזהמים")
 stat, p_value = stats.mannwhitneyu(filtered_df[pollutant_1], filtered_df[pollutant_2], alternative='two-sided')
 col1, col2, col3 = st.columns(3)
 with col1:

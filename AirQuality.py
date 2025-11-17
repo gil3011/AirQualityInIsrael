@@ -15,13 +15,12 @@ def load_data():
         df["year"] = df["תאריך ושעה"].dt.year
         df["month"] = df["תאריך ושעה"].dt.month
         pollutants_df[p] = df
-    season_data = pd.read_csv("season_data.csv")
+    season_data = pd.read_csv("Data/season_data.csv")
     return pollutants_df , season_data
 
 st.markdown("""
     <style>
     body, .reportview-container, .main {
-        direction: rtl;
         text-align: right;
     }
     </style>

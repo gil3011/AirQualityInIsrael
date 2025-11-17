@@ -5,8 +5,8 @@ from pyproj import Transformer
 import pydeck as pdk
 from math import radians, sin, cos, sqrt, atan2
 
-df_cities = pd.read_csv("cities.csv")
-df_stations = pd.read_csv("stations.csv")
+df_cities = pd.read_csv("Data/cities.csv")
+df_stations = pd.read_csv("Data/stations.csv")
 
 # Clean column names
 df_stations.columns = df_stations.columns.str.strip()
@@ -41,7 +41,6 @@ st.title("מפת תחנות ויישובים")
 st.markdown("""
     <style>
     body, .reportview-container, .main {
-        direction: rtl;
         text-align: right;
     }
     </style>
